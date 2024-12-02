@@ -1,12 +1,12 @@
-package fr.damnardev.example.springboot.rest.openapi.controller;
+package fr.damnardev.controller;
 
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicLong;
 
-import fr.damnardev.example.springboot.rest.openapi.model.Message;
-import fr.damnardev.example.springboot.rest.openapi.model.MessageForm;
+import fr.damnardev.model.Message;
+import fr.damnardev.model.MessageForm;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

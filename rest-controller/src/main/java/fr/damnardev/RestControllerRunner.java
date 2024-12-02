@@ -1,4 +1,4 @@
-package fr.damnardev.example.springboot.rest;
+package fr.damnardev;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
