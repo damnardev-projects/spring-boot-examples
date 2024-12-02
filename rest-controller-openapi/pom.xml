@@ -31,7 +31,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>rest-controller</finalName>
+		<finalName>rest-controller-openapi</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

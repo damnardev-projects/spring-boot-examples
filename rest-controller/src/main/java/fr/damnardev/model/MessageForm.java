@@ -1,4 +1,4 @@
-package fr.damnardev.example.springboot.rest.openapi.model;
+package fr.damnardev.model;
 
 import lombok.Builder;
 

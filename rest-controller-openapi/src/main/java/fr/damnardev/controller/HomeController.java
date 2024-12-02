@@ -1,4 +1,4 @@
-package fr.damnardev.example.springboot.rest.openapi.controller;
+package fr.damnardev.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
