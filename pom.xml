@@ -13,6 +13,7 @@
 		<module>rest-controller</module>
 		<module>rest-controller-openapi</module>
 		<module>web-socket</module>
+		<module>web-socket-stomp</module>
 	</modules>
 
 	<properties>
