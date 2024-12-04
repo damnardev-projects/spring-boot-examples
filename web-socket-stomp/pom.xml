@@ -10,7 +10,7 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>web-socket-stomp-parent</artifactId>
+	<artifactId>web-socket-stomp</artifactId>
 	<packaging>pom</packaging>
 
 	<modules>
