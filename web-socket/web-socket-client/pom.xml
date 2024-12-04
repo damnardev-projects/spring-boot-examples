@@ -6,7 +6,7 @@
 
 	<parent>
 		<groupId>fr.damnardev.examples.spring-boot</groupId>
-		<artifactId>web-socket-parent</artifactId>
+		<artifactId>web-socket</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
