@@ -27,7 +27,7 @@ public class InMemoryAuthWebSecurityConfigurer {
 	@Bean
 	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 		http.csrf(AbstractHttpConfigurer::disable)
-				.authorizeHttpRequests(matcher ->
+				.authorizeHttpRequests((matcher) ->
 						matcher.anyRequest().authenticated()
 				)
 				.httpBasic(Customizer.withDefaults());
