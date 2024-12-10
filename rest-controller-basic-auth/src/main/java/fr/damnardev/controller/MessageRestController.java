@@ -10,6 +10,7 @@ import fr.damnardev.model.MessageForm;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -39,11 +40,13 @@ public class MessageRestController {
 	}
 
 	@GetMapping
+	@PreAuthorize("hasAnyRole('USER')")
 	public ResponseEntity<Collection<Message>> findAll() {
 		return ResponseEntity.ok(this.messages.values());
 	}
 
 	@GetMapping("/{id}")
+	@PreAuthorize("hasAnyRole('USER')")
 	public ResponseEntity<Message> findById(@PathVariable("id") long id) {
 		if (this.messages.containsKey(id)) {
 			return ResponseEntity.ok(this.messages.get(id));
@@ -54,6 +57,7 @@ public class MessageRestController {
 	}
 
 	@PostMapping
+	@PreAuthorize("hasAnyRole('USER')")
 	public ResponseEntity<Message> create(@RequestBody MessageForm form) {
 		var message = Message.builder().id(this.idGenerator.getAndIncrement()).content(form.content()).build();
 		this.messages.put(message.id(), message);
@@ -61,6 +65,7 @@ public class MessageRestController {
 	}
 
 	@PutMapping("/{id}")
+	@PreAuthorize("hasAnyRole('USER')")
 	public ResponseEntity<Void> updateById(@PathVariable("id") long id, @RequestBody MessageForm form) {
 		if (this.messages.containsKey(id)) {
 			var message = Message.builder().id(id).content(form.content()).build();
@@ -73,6 +78,7 @@ public class MessageRestController {
 	}
 
 	@DeleteMapping("/{id}")
+	@PreAuthorize("hasAnyRole('USER')")
 	public ResponseEntity<Void> deleteById(@PathVariable("id") long id) {
 		if (this.messages.containsKey(id)) {
 			this.messages.remove(id);
