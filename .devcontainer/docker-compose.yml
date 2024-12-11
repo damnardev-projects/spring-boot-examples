@@ -8,9 +8,9 @@ services:
       resources:
         limits:
           cpus: "4.0"
-          memory: 2048M
+          memory: 4096M
         reservations:
           cpus: "0.5"
-          memory: 2048M
+          memory: 4096M
     command: sleep infinity
     restart: unless-stopped
