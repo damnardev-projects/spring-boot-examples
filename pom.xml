@@ -24,12 +24,12 @@
 		<maven.compiler.target>21</maven.compiler.target>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-		<spring-boot-dependencies.version>3.3.5</spring-boot-dependencies.version>
+		<spring-boot-dependencies.version>3.4.0</spring-boot-dependencies.version>
 		<maven-checkstyle-plugin.version>3.6.0</maven-checkstyle-plugin.version>
 		<checkstyle.version>10.20.1</checkstyle.version>
 		<spring-javaformat-checkstyle.version>0.0.43
 		</spring-javaformat-checkstyle.version>
-		<springdoc-openapi-starter-webmvc-ui.version>2.3.0</springdoc-openapi-starter-webmvc-ui.version>
+		<springdoc.version>2.7.0</springdoc.version>
 	</properties>
 
 	<dependencyManagement>
@@ -41,10 +41,13 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
+			<!-- OpenAPI 3 -->
 			<dependency>
 				<groupId>org.springdoc</groupId>
-				<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
-				<version>${springdoc-openapi-starter-webmvc-ui.version}</version>
+				<artifactId>springdoc-openapi</artifactId>
+				<version>${springdoc.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
