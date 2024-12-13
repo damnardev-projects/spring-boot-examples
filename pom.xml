@@ -15,6 +15,7 @@
 		<module>rest-controller-openapi</module>
 		<module>rest-controller-openapi-basic-auth</module>
 		<module>web-socket</module>
+		<module>web-socket-basic-auth</module>
 		<module>web-socket-stomp</module>
 	</modules>
 
