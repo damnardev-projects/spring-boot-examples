@@ -29,7 +29,7 @@
 		<checkstyle.version>10.20.1</checkstyle.version>
 		<spring-javaformat-checkstyle.version>0.0.43
 		</spring-javaformat-checkstyle.version>
-		<springdoc-openapi-starter-webmvc-ui.version>2.3.0</springdoc-openapi-starter-webmvc-ui.version>
+		<springdoc-openapi-starter-webmvc-ui.version>2.7.0</springdoc-openapi-starter-webmvc-ui.version>
 	</properties>
 
 	<dependencyManagement>
