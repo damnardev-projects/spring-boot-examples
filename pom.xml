@@ -17,6 +17,7 @@
 		<module>web-socket</module>
 		<module>web-socket-basic-auth</module>
 		<module>web-socket-stomp</module>
+		<module>web-socket-stomp-basic-auth</module>
 	</modules>
 
 	<properties>
