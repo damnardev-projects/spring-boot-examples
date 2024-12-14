@@ -31,6 +31,8 @@
 		<spring-javaformat-checkstyle.version>0.0.43
 		</spring-javaformat-checkstyle.version>
 		<springdoc.version>2.7.0</springdoc.version>
+
+		<sonar.projectKey>spring-boot-examples</sonar.projectKey>
 	</properties>
 
 	<dependencyManagement>
