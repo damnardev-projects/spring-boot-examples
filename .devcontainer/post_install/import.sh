@@ -1,5 +1,14 @@
 #!/bin/bash
 
+if [ "$#" -ne 2 ]; then
+  echo "Error: Two parameters are required."
+  echo "Usage: $0 <user.name> <user.email>"
+  exit 1
+fi
+
+git config --global user.name $1
+git config --global user.email $2
+
 gpg --quiet --delete-keys --yes 2> /dev/null
 gpg --quiet --delete-secret-keys --yes 2> /dev/null
 
@@ -20,6 +29,8 @@ if [ -n "$key" ]; then
   git config --global user.signingkey "$key"
   git config --global commit.gpgsign true
   git config --global tag.gpgSign true
+
+  rm public.key private.key
 
   echo "Git configuration updated with key: $key"
 else
