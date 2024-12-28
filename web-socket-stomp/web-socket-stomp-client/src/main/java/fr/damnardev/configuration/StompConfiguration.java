@@ -28,7 +28,7 @@ public class StompConfiguration {
 
 	@Bean
 	public StompSession stompSession(WebSocketStompClient stompClient, DefaultWebSocketHandler sessionHandler) throws ExecutionException, InterruptedException {
-		var session = stompClient.connect("ws://localhost:8080/ws", sessionHandler).get();
+		var session = stompClient.connectAsync("ws://localhost:8080/ws", sessionHandler).get();
 		session.subscribe("/topic/response", sessionHandler);
 		return session;
 	}
