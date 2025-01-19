@@ -10,6 +10,7 @@
 	<packaging>pom</packaging>
 
 	<modules>
+		<module>command-line-runner</module>
 		<module>rest-controller</module>
 		<module>rest-controller-basic-auth</module>
 		<module>rest-controller-openapi</module>
