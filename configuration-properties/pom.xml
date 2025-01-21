@@ -10,7 +10,7 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>command-line-runner</artifactId>
+	<artifactId>configuration-properties</artifactId>
 	<packaging>jar</packaging>
 
 	<dependencies>
@@ -26,7 +26,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>command-line-runner</finalName>
+		<finalName>configuration-properties</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

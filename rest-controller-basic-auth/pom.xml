@@ -30,7 +30,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>rest-controller</finalName>
+		<finalName>rest-controller-basic-auth</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
