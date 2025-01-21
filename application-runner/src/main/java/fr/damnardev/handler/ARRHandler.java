@@ -1,4 +1,4 @@
-package fr.damnardev.controller;
+package fr.damnardev.handler;
 
 import lombok.extern.slf4j.Slf4j;
 
