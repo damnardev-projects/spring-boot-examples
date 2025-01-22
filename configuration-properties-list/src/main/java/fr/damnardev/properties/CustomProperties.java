@@ -1,6 +1,5 @@
 package fr.damnardev.properties;
 
-import java.time.LocalDate;
 import java.util.List;
 
 import lombok.AllArgsConstructor;
