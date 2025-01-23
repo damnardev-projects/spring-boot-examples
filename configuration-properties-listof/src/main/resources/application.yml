@@ -1,0 +1,6 @@
+custom:
+  users:
+    - name: "John"
+      birthdate: "2023-01-23"
+    - name: "Jane"
+      birthdate: "2024-01-23"

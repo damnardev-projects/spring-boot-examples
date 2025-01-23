@@ -14,6 +14,7 @@
 		<module>command-line-runner</module>
 		<module>configuration-properties</module>
 		<module>configuration-properties-list</module>
+		<module>configuration-properties-listof</module>
 		<module>rest-controller</module>
 		<module>rest-controller-basic-auth</module>
 		<module>rest-controller-openapi</module>
