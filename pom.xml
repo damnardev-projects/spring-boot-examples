@@ -15,6 +15,7 @@
 		<module>configuration-properties</module>
 		<module>configuration-properties-list</module>
 		<module>configuration-properties-listof</module>
+		<module>configuration-properties-mapof</module>
 		<module>jpa-simple-entity-and-repository</module>
 		<module>rest-controller</module>
 		<module>rest-controller-basic-auth</module>
