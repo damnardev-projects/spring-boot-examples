@@ -19,6 +19,7 @@
 		<module>jpa-simple-entity-and-repository</module>
 		<module>jpa-simple-entity-with-list-of-string</module>
 		<module>jpa-simple-entity-with-map-of-string</module>
+		<module>jpa-simple-entity-with-one-to-one</module>
 		<module>rest-controller</module>
 		<module>rest-controller-basic-auth</module>
 		<module>rest-controller-openapi</module>
