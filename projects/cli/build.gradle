@@ -1,0 +1,12 @@
+plugins {
+	id 'application-conventions'
+}
+
+dependencies {
+	implementation project(':projects:common')
+	implementation 'org.springframework.boot:spring-boot-starter'
+}
+
+application {
+	mainClass.set('fr.damnardev.template.gradle.spring.cli.Startup')
+}
