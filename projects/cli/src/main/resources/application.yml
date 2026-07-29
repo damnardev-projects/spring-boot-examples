@@ -1,5 +1,0 @@
-spring:
-  application:
-    name: maven-spring-boot-template-cli
-  main:
-    banner-mode: off

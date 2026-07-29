@@ -3,10 +3,10 @@ plugins {
 }
 
 dependencies {
-	implementation project(':projects:common')
 	implementation 'org.springframework.boot:spring-boot-starter'
+	runtimeOnly 'org.springframework.boot:spring-boot-starter-logging'
 }
 
 application {
-	mainClass.set('fr.damnardev.template.gradle.spring.cli.Startup')
+	mainClass = 'fr.damnardev.spring.example.commandlinerunner.Startup'
 }
