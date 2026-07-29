@@ -1,6 +1,6 @@
-# Gradle Spring Boot Template
+# Spring Boot Examples
 
-Multi-module Gradle project with Gradle wrapper, configured for Java 21 and Spring Boot. This repository provides a small, opinionated template for CLI and common modules, with aggregated JaCoCo coverage reports and SonarQube integration.
+This project contains a collection of Spring Boot examples.
 
 ## Structure
 
@@ -9,12 +9,12 @@ Multi-module Gradle project with Gradle wrapper, configured for Java 21 and Spri
     - `settings.gradle` — declares the project modules.
 - **gradle/libs.versions.toml** — version catalog for dependencies and plugins.
 - **buildSrc/** — shared build logic implemented as convention plugins:
-    - `common-conventions` — applies the `java` plugin and `io.spring.dependency-management` plugin, sets the Java 21 toolchain, configures JUnit Platform, and adds Spring Boot BOM platform dependency.
+    - `common-conventions` — applies the `java` plugin and `io.spring.dependency-management` plugin, sets the Java 21
+      toolchain, configures JUnit Platform, and adds Spring Boot BOM platform dependency.
     - `library-conventions` — extends `common-conventions` for library modules.
-    - `application-conventions` — extends `common-conventions`, applies the `application` plugin and `org.springframework.boot` plugin for runnable Spring Boot applications.
-- **projects/** — application modules:
-    - `projects/common` — shared library code used by other modules (package: `fr.damnardev.template.gradle.spring.common`).
-    - `projects/cli` — Spring Boot CLI application (uses `application-conventions`, main class: `fr.damnardev.template.gradle.spring.cli.Startup`).
+    - `application-conventions` — extends `common-conventions`, applies the `application` plugin and
+      `org.springframework.boot` plugin for runnable Spring Boot applications.
+- **projects/** — all spring boot examples
 - **build/** — compiled outputs and generated reports.
 
 ## Useful Commands
@@ -23,21 +23,11 @@ Use the included Gradle wrapper (`gradlew` / `gradlew.bat`) to ensure all develo
 
 - `./gradlew clean` : removes generated files
 - `./gradlew build` : compiles, tests, and assembles all artifacts
-- `./gradlew test` : runs unit tests
-- `./gradlew aggregate` : generates the aggregated JaCoCo XML/HTML report in `build/reports/jacoco/aggregate/`
-- `./gradlew :projects:cli:bootRun` : runs the CLI application
-- `./gradlew :projects:cli:installBootDist` : installs the CLI distribution under `projects/cli/build/install/`
-- `./gradlew sonar` : sends coverage and analysis data to SonarQube (requires env vars below)
 
-### SonarQube
+## Examples
 
-SonarQube analysis is only enabled when the `SONAR_TOKEN` (authentication token) and `SONAR_URI` (server URL) environment variables are both set.
-
-## Adding a Module
-
-Edit `settings.gradle` to include the new module (e.g. `include 'projects:new-module'`), then add it to the `jacocoAggregation` dependencies in the root `build.gradle` to include it in the aggregated coverage report.
-
-## Adding a Dependency
-
-Add the dependency and its version to `gradle/libs.versions.toml`, then edit `CommonConventionsPlugin` in `buildSrc/` to register it as a dependency constraint under the appropriate configuration (`implementation`, `testImplementation`,
-`runtimeOnly`, etc.). Finally, reference the dependency in the module's `build.gradle` where it is needed (e.g. `implementation libs.some.dependency`).
+1. `Spring Command Line Runner` is a simple Spring Boot application which start the context and execute a
+   `CommandLineRunner` to print messages.
+    - `./gradlew :projects:command-line-runner:bootRun` : runs the Command Line Runner application
+    - `./gradlew :projects:command-line-runner:bootRun --args="Foo Bar"` : runs the Command Line Runner application with
+      arguments

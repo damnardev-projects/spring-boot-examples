@@ -1,4 +1,3 @@
-rootProject.name = 'gradle-spring-boot-template-build'
+rootProject.name = 'spring-boot-examples'
 
-include 'projects:common'
-include 'projects:cli'
+include 'projects:command-line-runner'
