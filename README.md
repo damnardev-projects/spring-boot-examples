@@ -31,3 +31,9 @@ Use the included Gradle wrapper (`gradlew` / `gradlew.bat`) to ensure all develo
     - `./gradlew :projects:command-line-runner:bootRun` : runs the Command Line Runner application
     - `./gradlew :projects:command-line-runner:bootRun --args="Foo Bar"` : runs the Command Line Runner application with
       arguments
+
+2. `Application Runner` is a simple Spring Boot application which start the context and execute an `ApplicationRunner`
+   to print messages.
+    - `./gradlew :projects:application-runner:bootRun` : runs the Application Runner application
+    - `./gradlew :projects:application-runner:bootRun --args="Foo -d --debug --other=Bar"` : runs the Application Runner
+      application with arguments

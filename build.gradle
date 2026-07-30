@@ -25,6 +25,7 @@ subprojects {
 dependencies {
 	// Aggregate JaCoCo reports from subprojects
 	jacocoAggregation project(':projects:command-line-runner')
+	jacocoAggregation project(':projects:application-runner')
 }
 
 /**
