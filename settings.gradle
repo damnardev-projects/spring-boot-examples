@@ -2,3 +2,4 @@ rootProject.name = 'spring-boot-examples'
 
 include 'projects:command-line-runner'
 include 'projects:application-runner'
+include 'projects:value-annotation'
