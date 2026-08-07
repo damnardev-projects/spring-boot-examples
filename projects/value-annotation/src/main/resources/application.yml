@@ -1,0 +1,10 @@
+spring:
+  main:
+    banner-mode: off
+
+app:
+  name: Spring Value Annotation Example
+  environment: production
+  port: 8080
+  tags: tag1,tag2,tag3
+  debug: true

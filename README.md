@@ -37,3 +37,7 @@ Use the included Gradle wrapper (`gradlew` / `gradlew.bat`) to ensure all develo
     - `./gradlew :projects:application-runner:bootRun` : runs the Application Runner application
     - `./gradlew :projects:application-runner:bootRun --args="Foo -d --debug --other=Bar"` : runs the Application Runner
       application with arguments
+
+3. `Spring Value Annotation` is a simple Spring Boot application which demonstrates the use of the `@Value` annotation
+   to inject properties.
+    - `./gradlew :projects:value-annotation:bootRun` : runs the Spring Value Annotation application
