@@ -41,3 +41,6 @@ Use the included Gradle wrapper (`gradlew` / `gradlew.bat`) to ensure all develo
 3. `Spring Value Annotation` is a simple Spring Boot application which demonstrates the use of the `@Value` annotation
    to inject properties.
     - `./gradlew :projects:value-annotation:bootRun` : runs the Spring Value Annotation application
+
+4. `Spring Scheduled Annotation`is a simple Spring Boot application which demonstrates the use of the `@Scheduled` annotation to schedule tasks (e.g., fixed rate, fixed delay, cron).
+    - `./gradlew :projects:scheduled-annotation:bootRun` : runs the Spring Scheduled Annotation application
