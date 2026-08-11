@@ -28,6 +28,7 @@ dependencies {
 	jacocoAggregation project(':projects:application-runner')
 	jacocoAggregation project(':projects:value-annotation')
 	jacocoAggregation project(':projects:scheduled-annotation')
+	jacocoAggregation project(':projects:configuration-properties')
 }
 
 /**
