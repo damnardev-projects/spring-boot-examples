@@ -29,6 +29,7 @@ dependencies {
 	jacocoAggregation project(':projects:value-annotation')
 	jacocoAggregation project(':projects:scheduled-annotation')
 	jacocoAggregation project(':projects:configuration-properties')
+	jacocoAggregation project(':projects:swagger-rest-controller')
 }
 
 /**
