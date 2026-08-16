@@ -18,6 +18,7 @@ public class DependenciesConvention {
 
 	public void apply(Project project, VersionCatalog libs) {
 		Provider<MinimalExternalModuleDependency> springBootBom = get(libs, "spring-boot-bom");
+		Provider<MinimalExternalModuleDependency> swaggerUi = get(libs, "swagger-ui");
 
 		DependencyHandler dependencies = project.getDependencies();
 		dependencies.add(IMPLEMENTATION_CONFIGURATION_NAME, dependencies.platform(springBootBom));
@@ -27,6 +28,8 @@ public class DependenciesConvention {
 		// 2. Add library definition to libs.versions.toml
 		// 3. Add constraint
 		// 4. Reference in module build.gradle: implementation libs.your.new.dependency
+
+		dependencies.constraints(c -> c.add(IMPLEMENTATION_CONFIGURATION_NAME, swaggerUi));
 	}
 
 }
