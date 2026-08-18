@@ -17,7 +17,7 @@ public class AppProperties {
 	private List<String> tags;
 
 	public String name() {
-		return name;
+		return this.name;
 	}
 
 	public void setName(String name) {
@@ -25,7 +25,7 @@ public class AppProperties {
 	}
 
 	public String version() {
-		return version;
+		return this.version;
 	}
 
 	public void setVersion(String version) {
@@ -33,7 +33,7 @@ public class AppProperties {
 	}
 
 	public String environment() {
-		return environment;
+		return this.environment;
 	}
 
 	public void setEnvironment(String environment) {
@@ -41,7 +41,7 @@ public class AppProperties {
 	}
 
 	public int port() {
-		return port;
+		return this.port;
 	}
 
 	public void setPort(int port) {
@@ -49,7 +49,7 @@ public class AppProperties {
 	}
 
 	public boolean debug() {
-		return debug;
+		return this.debug;
 	}
 
 	public void setDebug(boolean debug) {
@@ -57,7 +57,7 @@ public class AppProperties {
 	}
 
 	public List<String> tags() {
-		return tags;
+		return this.tags;
 	}
 
 	public void setTags(List<String> tags) {

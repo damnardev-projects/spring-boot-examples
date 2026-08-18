@@ -13,7 +13,7 @@ public class HelloWorldRunner implements ApplicationRunner {
 	private static final Logger logger = LoggerFactory.getLogger(HelloWorldRunner.class);
 
 	@Override
-	public void run(ApplicationArguments args) throws Exception {
+	public void run(ApplicationArguments args) {
 		logger.info("Hello World");
 
 		// Retrieve all non-option arguments.
