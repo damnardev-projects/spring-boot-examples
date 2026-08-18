@@ -36,7 +36,7 @@ public class EmployeeController {
 	@Operation(summary = "Get all employees", description = "Retrieve a list of all employees")
 	@ApiResponse(responseCode = "200", description = "List of employees", content = @Content(mediaType = "application/json", schema = @Schema(implementation = Employee.class)))
 	public ResponseEntity<List<Employee>> getAllEmployees() {
-		return ResponseEntity.ok(employees);
+		return ResponseEntity.ok(this.employees);
 	}
 
 	@GetMapping("/{id}")
@@ -46,11 +46,10 @@ public class EmployeeController {
 			@ApiResponse(responseCode = "404", description = "Employee not found")
 	})
 	public ResponseEntity<Employee> getEmployeeById(@PathVariable UUID id) {
-		Optional<Employee> employee = employees.stream().filter(e -> e.getId().equals(id)).findFirst();
-		if (employee.isPresent()) {
-			return ResponseEntity.ok(employee.get());
-		}
-		return ResponseEntity.notFound().build();
+		Optional<Employee> employee = this.employees.stream().filter(e -> e.getId().equals(id)).findFirst();
+		return employee.map(ResponseEntity::ok)
+					   .orElseGet(() -> ResponseEntity.notFound()
+													  .build());
 	}
 
 	@PostMapping
@@ -58,7 +57,7 @@ public class EmployeeController {
 	@ApiResponse(responseCode = "201", description = "Employee created", content = @Content(mediaType = "application/json", schema = @Schema(implementation = Employee.class)))
 	public ResponseEntity<Employee> createEmployee(@RequestBody Employee employee) {
 		employee.setId(UUID.randomUUID());
-		employees.add(employee);
+		this.employees.add(employee);
 		return ResponseEntity.status(HttpStatus.CREATED).body(employee);
 	}
 
@@ -69,7 +68,7 @@ public class EmployeeController {
 			@ApiResponse(responseCode = "404", description = "Employee not found")
 	})
 	public ResponseEntity<Employee> updateEmployee(@PathVariable UUID id, @RequestBody Employee updatedEmployee) {
-		Optional<Employee> employee = employees.stream().filter(e -> e.getId().equals(id)).findFirst();
+		Optional<Employee> employee = this.employees.stream().filter(e -> e.getId().equals(id)).findFirst();
 		if (employee.isPresent()) {
 			Employee emp = employee.get();
 			emp.setFirstName(updatedEmployee.getFirstName());
@@ -87,7 +86,7 @@ public class EmployeeController {
 			@ApiResponse(responseCode = "404", description = "Employee not found")
 	})
 	public ResponseEntity<Void> deleteEmployee(@PathVariable UUID id) {
-		boolean removed = employees.removeIf(e -> e.getId().equals(id));
+		boolean removed = this.employees.removeIf(e -> e.getId().equals(id));
 		if (removed) {
 			return ResponseEntity.noContent().build();
 		}

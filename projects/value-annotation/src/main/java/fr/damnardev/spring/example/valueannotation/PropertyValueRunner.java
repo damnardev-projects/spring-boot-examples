@@ -58,14 +58,14 @@ public class PropertyValueRunner implements CommandLineRunner {
 	private String javaHome;
 
 	@Override
-	public void run(String... args) throws Exception {
-		logger.info("Application Name: {}", appName);
-		logger.info("Application Version: {}", appVersion);
-		logger.info("Environment: {}", environment);
-		logger.info("Server Port: {}", port);
-		logger.info("Debug Mode: {}", debug);
-		logger.info("Tags: {}", tags);
-		logger.info("Java Home: {}", javaHome);
+	public void run(String... args) {
+		logger.info("Application Name: {}", this.appName);
+		logger.info("Application Version: {}", this.appVersion);
+		logger.info("Environment: {}", this.environment);
+		logger.info("Server Port: {}", this.port);
+		logger.info("Debug Mode: {}", this.debug);
+		logger.info("Tags: {}", this.tags);
+		logger.info("Java Home: {}", this.javaHome);
 	}
 
 }

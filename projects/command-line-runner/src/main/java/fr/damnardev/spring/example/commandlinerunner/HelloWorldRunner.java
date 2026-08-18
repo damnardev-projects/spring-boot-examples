@@ -12,9 +12,9 @@ public class HelloWorldRunner implements CommandLineRunner {
 	private static final Logger logger = LoggerFactory.getLogger(HelloWorldRunner.class);
 
 	@Override
-	public void run(String... args) throws Exception {
+	public void run(String... args) {
 		logger.info("Hello World");
-		if (args != null && args.length > 0) {
+		if (args.length > 0) {
 			logger.info("Args: {}", String.join(", ", args));
 		}
 		else {

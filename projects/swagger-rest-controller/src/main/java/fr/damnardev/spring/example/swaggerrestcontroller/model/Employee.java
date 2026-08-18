@@ -21,7 +21,7 @@ public class Employee {
 	}
 
 	public UUID getId() {
-		return id;
+		return this.id;
 	}
 
 	public void setId(UUID id) {
@@ -29,7 +29,7 @@ public class Employee {
 	}
 
 	public String getFirstName() {
-		return firstName;
+		return this.firstName;
 	}
 
 	public void setFirstName(String firstName) {
@@ -37,7 +37,7 @@ public class Employee {
 	}
 
 	public String getLastName() {
-		return lastName;
+		return this.lastName;
 	}
 
 	public void setLastName(String lastName) {
@@ -45,7 +45,7 @@ public class Employee {
 	}
 
 	public LocalDate getBirthday() {
-		return birthday;
+		return this.birthday;
 	}
 
 	public void setBirthday(LocalDate birthday) {

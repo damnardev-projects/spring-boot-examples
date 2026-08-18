@@ -3,6 +3,7 @@ package fr.damnardev.spring.example.configurationproperties;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -18,7 +19,9 @@ public class PropertyConfigurationRunner implements CommandLineRunner {
 	/*
 	 * Constructor injection of AppProperties beans for first and second applications.
 	 */
-	public PropertyConfigurationRunner(AppProperties firstAppProperties, AppProperties secondAppProperties) {
+	public PropertyConfigurationRunner(
+			@Qualifier("firstAppProperties") AppProperties firstAppProperties,
+			@Qualifier("secondAppProperties") AppProperties secondAppProperties) {
 		this.firstAppProperties = firstAppProperties;
 		this.secondAppProperties = secondAppProperties;
 	}
@@ -33,9 +36,9 @@ public class PropertyConfigurationRunner implements CommandLineRunner {
 	}
 
 	@Override
-	public void run(String... args) throws Exception {
-		print(firstAppProperties);
-		print(secondAppProperties);
+	public void run(String... args) {
+		print(this.firstAppProperties);
+		print(this.secondAppProperties);
 	}
 
 }

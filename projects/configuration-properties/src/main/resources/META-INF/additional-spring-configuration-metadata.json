@@ -1,0 +1,52 @@
+{
+  "properties": [
+    {
+      "name": "first-app.name",
+      "type": "java.lang.String"
+    },
+    {
+      "name": "first-app.version",
+      "type": "java.lang.String"
+    },
+    {
+      "name": "first-app.environment",
+      "type": "java.lang.String"
+    },
+    {
+      "name": "first-app.port",
+      "type": "java.lang.Integer"
+    },
+    {
+      "name": "first-app.tags",
+      "type": "java.util.List<java.lang.String>"
+    },
+    {
+      "name": "first-app.debug",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "name": "second-app.name",
+      "type": "java.lang.String"
+    },
+    {
+      "name": "second-app.version",
+      "type": "java.lang.String"
+    },
+    {
+      "name": "second-app.environment",
+      "type": "java.lang.String"
+    },
+    {
+      "name": "second-app.port",
+      "type": "java.lang.Integer"
+    },
+    {
+      "name": "second-app.tags",
+      "type": "java.util.List<java.lang.String>"
+    },
+    {
+      "name": "second-app.debug",
+      "type": "java.lang.Boolean"
+    }
+  ]
+}
