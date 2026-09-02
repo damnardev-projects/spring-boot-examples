@@ -29,8 +29,8 @@ dependencies {
 	jacocoAggregation project(':projects:value-annotation')
 	jacocoAggregation project(':projects:scheduled-annotation')
 	jacocoAggregation project(':projects:configuration-properties')
-	jacocoAggregation project(':projects:swagger-rest-controller')
-	jacocoAggregation project(':projects:scalar-rest-controller')
+	jacocoAggregation project(':projects:swagger-webmvc')
+	jacocoAggregation project(':projects:scalar-webmvc')
 }
 
 /**
