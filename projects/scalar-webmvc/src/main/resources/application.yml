@@ -1,0 +1,9 @@
+spring:
+  main:
+    banner-mode: off
+  application:
+    name: scalar-webmvc
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs

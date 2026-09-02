@@ -1,0 +1,13 @@
+plugins {
+	id 'application-conventions'
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-scalar'
+	runtimeOnly 'org.springframework.boot:spring-boot-starter-logging'
+}
+
+application {
+	mainClass = 'fr.damnardev.spring.example.scalarwebmvc.Startup'
+}
