@@ -1,6 +1,6 @@
-# Scalar REST Controller Example
+# Swagger REST Controller Example
 
-A simple Spring Boot application which demonstrates a complete REST API with interactive documentation via Scalar UI.
+A simple Spring Boot application which demonstrates a complete REST API with interactive documentation via Scalar.
 
 ## Running the Application
 
