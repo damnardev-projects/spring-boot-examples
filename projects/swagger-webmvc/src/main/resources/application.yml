@@ -3,6 +3,18 @@ spring:
     banner-mode: off
   application:
     name: swagger-webmvc
+  datasource:
+    url: jdbc:h2:mem:demo
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  h2:
+    console:
+      enabled: false
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    open-in-view: false
 
 springdoc:
   api-docs:

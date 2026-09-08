@@ -1,31 +1,43 @@
 package fr.damnardev.spring.example.swaggerwebmvc.model;
 
 import java.time.LocalDate;
-import java.util.UUID;
+import java.util.Objects;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "t_employee")
 public class Employee {
 
-	private UUID id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+
+	@Column(name = "first_name")
 	private String firstName;
+
+	@Column(name = "last_name")
 	private String lastName;
+
+	@Column(name = "birthday", columnDefinition = "DATE")
 	private LocalDate birthday;
 
 	public Employee() {
 	}
 
 	public Employee(String firstName, String lastName, LocalDate birthday) {
-		this.id = UUID.randomUUID();
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.birthday = birthday;
 	}
 
-	public UUID getId() {
+	public Long getId() {
 		return this.id;
-	}
-
-	public void setId(UUID id) {
-		this.id = id;
 	}
 
 	public String getFirstName() {
@@ -50,6 +62,19 @@ public class Employee {
 
 	public void setBirthday(LocalDate birthday) {
 		this.birthday = birthday;
+	}
+
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+		Employee employee = (Employee) o;
+		return this.id != null && Objects.equals(this.id, employee.id);
+	}
+
+	@Override
+	public int hashCode() {
+		return getClass().hashCode();
 	}
 
 }
