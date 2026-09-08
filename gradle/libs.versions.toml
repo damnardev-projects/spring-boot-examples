@@ -8,8 +8,8 @@ springdoc = "3.1.0"
 [libraries]
 spring-boot-bom = { group = "org.springframework.boot", name = "spring-boot-dependencies", version.ref = "spring-boot" }
 spring-boot-gradle-plugin = { group = "org.springframework.boot", name = "spring-boot-gradle-plugin", version.ref = "spring-boot" }
-swagger-ui = { group = "org.springdoc", name = "springdoc-openapi-starter-webmvc-ui", version.ref = "springdoc" }
-scalar-ui = { group = "org.springdoc", name = "springdoc-openapi-starter-webmvc-scalar", version.ref = "springdoc" }
+swagger-webmvc = { group = "org.springdoc", name = "springdoc-openapi-starter-webmvc-ui", version.ref = "springdoc" }
+scalar-webmvc = { group = "org.springdoc", name = "springdoc-openapi-starter-webmvc-scalar", version.ref = "springdoc" }
 
 [plugins]
 sonarqube = { id = "org.sonarqube", version.ref = "sonarqube" }
