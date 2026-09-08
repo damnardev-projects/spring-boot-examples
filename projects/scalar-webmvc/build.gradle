@@ -4,7 +4,9 @@ plugins {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-scalar'
+	runtimeOnly 'com.h2database:h2'
 	runtimeOnly 'org.springframework.boot:spring-boot-starter-logging'
 }
 
