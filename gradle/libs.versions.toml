@@ -3,7 +3,7 @@ java = "21"
 sonarqube = "7.5.0.8588"
 jacoco = "0.8.10"
 spring-boot = "4.1.1"
-springdoc = "3.1.0"
+springdoc = "3.1.1"
 
 [libraries]
 spring-boot-bom = { group = "org.springframework.boot", name = "spring-boot-dependencies", version.ref = "spring-boot" }
