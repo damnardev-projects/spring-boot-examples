@@ -1,0 +1,14 @@
+plugins {
+	id 'application-conventions'
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	runtimeOnly 'com.h2database:h2'
+	runtimeOnly 'org.springframework.boot:spring-boot-starter-logging'
+}
+
+application {
+	mainClass = 'fr.damnardev.spring.example.jpaexample.Startup'
+}
