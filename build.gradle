@@ -31,6 +31,7 @@ dependencies {
 	jacocoAggregation project(':projects:configuration-properties')
 	jacocoAggregation project(':projects:swagger-webmvc')
 	jacocoAggregation project(':projects:scalar-webmvc')
+	jacocoAggregation project(':projects:jpa-example')
 }
 
 /**
