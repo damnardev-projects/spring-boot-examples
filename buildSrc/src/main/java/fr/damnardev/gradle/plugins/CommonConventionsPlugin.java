@@ -10,8 +10,8 @@ public class CommonConventionsPlugin implements Plugin<Project> {
 	@Override
 	public void apply(Project project) {
 		VersionCatalog libs = project.getExtensions()
-		                             .getByType(VersionCatalogsExtension.class)
-		                             .named("libs");
+									 .getByType(VersionCatalogsExtension.class)
+									 .named("libs");
 
 		new PluginConvention().apply(project, "java", "io.spring.dependency-management");
 		new JavaConvention().apply(project, libs);

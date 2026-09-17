@@ -7,7 +7,7 @@ public class JUnitConvention {
 
 	public void apply(Project project) {
 		project.getTasks()
-		       .named("test", Test.class, Test::useJUnitPlatform);
+			   .named("test", Test.class, Test::useJUnitPlatform);
 	}
 
 }

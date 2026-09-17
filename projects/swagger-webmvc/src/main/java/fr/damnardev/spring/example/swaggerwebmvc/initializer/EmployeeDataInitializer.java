@@ -40,7 +40,7 @@ public class EmployeeDataInitializer implements ApplicationRunner {
 			for (String lastName : LAST_NAMES) {
 				long randomDay = ThreadLocalRandom.current()
 												  .nextLong(earliestBirthday.toEpochDay(), today.plusDays(1)
-				                                                                                .toEpochDay());
+																								.toEpochDay());
 				employees.add(new Employee(firstName, lastName, LocalDate.ofEpochDay(randomDay)));
 			}
 		}
