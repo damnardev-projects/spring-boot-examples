@@ -40,7 +40,7 @@ public class CacheService {
 		}
 		catch (InterruptedException exception) {
 			Thread.currentThread()
-			      .interrupt();
+				  .interrupt();
 			throw new IllegalStateException("The cacheable operation was interrupted", exception);
 		}
 	}

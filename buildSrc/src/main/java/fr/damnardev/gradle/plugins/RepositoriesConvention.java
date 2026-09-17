@@ -6,7 +6,7 @@ public class RepositoriesConvention {
 
 	public void apply(Project project) {
 		project.getRepositories()
-		       .mavenCentral();
+			   .mavenCentral();
 	}
 
 }

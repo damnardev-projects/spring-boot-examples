@@ -67,7 +67,7 @@ public class EmployeeCrudRunner implements ApplicationRunner {
 
 	private Employee getById(Long id) {
 		Employee fetchedEmployee = this.employeeRepository.findById(id)
-				.orElseThrow(() -> new IllegalStateException("Inserted employee was not found"));
+														  .orElseThrow(() -> new IllegalStateException("Inserted employee was not found"));
 		logger.info("Fetched employee: {}", fetchedEmployee);
 		return fetchedEmployee;
 	}

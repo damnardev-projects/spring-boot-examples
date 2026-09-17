@@ -4,8 +4,6 @@ import java.util.List;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 
-import fr.damnardev.spring.example.scalarwebmvc.dto.EmployeeDto;
-
 @Schema(description = "Employee list data transfer object")
 public record EmployeeListDto(
 		@Schema(description = "List of employees")
