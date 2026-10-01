@@ -30,6 +30,7 @@ dependencies {
 	jacocoAggregation project(':projects:core:scheduled-annotation')
 	jacocoAggregation project(':projects:core:configuration-properties')
 	jacocoAggregation project(':projects:web:swagger-webmvc')
+	jacocoAggregation project(':projects:web:swagger-webflux')
 	jacocoAggregation project(':projects:web:scalar-webmvc')
 	jacocoAggregation project(':projects:jpa:jpa-example')
 	jacocoAggregation project(':projects:cache:cache-annotation')

@@ -19,6 +19,7 @@ public class DependenciesConvention {
 	public void apply(Project project, VersionCatalog libs) {
 		Provider<MinimalExternalModuleDependency> springBootBom = get(libs, "spring-boot-bom");
 		Provider<MinimalExternalModuleDependency> swaggerWebMVC = get(libs, "swagger-webmvc");
+		Provider<MinimalExternalModuleDependency> swaggerWebFlux = get(libs, "swagger-webflux");
 		Provider<MinimalExternalModuleDependency> scalarWebMVC = get(libs, "scalar-webmvc");
 
 		DependencyHandler dependencies = project.getDependencies();
@@ -31,6 +32,7 @@ public class DependenciesConvention {
 		// 4. Reference in module build.gradle: implementation libs.your.new.dependency
 
 		dependencies.constraints(c -> c.add(IMPLEMENTATION_CONFIGURATION_NAME, swaggerWebMVC));
+		dependencies.constraints(c -> c.add(IMPLEMENTATION_CONFIGURATION_NAME, swaggerWebFlux));
 		dependencies.constraints(c -> c.add(IMPLEMENTATION_CONFIGURATION_NAME, scalarWebMVC));
 	}
 
