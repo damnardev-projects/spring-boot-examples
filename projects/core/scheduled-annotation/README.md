@@ -5,5 +5,5 @@ A simple Spring Boot application which demonstrates the use of the `@Scheduled` 
 ## Running the Application
 
 ```bash
-./gradlew :projects:scheduled-annotation:bootRun
+./gradlew :projects:core:scheduled-annotation:bootRun
 ```

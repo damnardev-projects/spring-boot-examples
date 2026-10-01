@@ -5,7 +5,7 @@ A simple Spring Boot application which demonstrates a complete REST API with int
 ## Running the Application
 
 ```bash
-./gradlew :projects:swagger-webmvc:bootRun
+./gradlew :projects:web:swagger-webmvc:bootRun
 ```
 
 Once the server is running, you can access the Swagger UI at [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html) to explore and test the REST endpoints.

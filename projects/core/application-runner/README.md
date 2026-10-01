@@ -6,8 +6,8 @@ A simple Spring Boot application which starts the context and executes an `Appli
 
 ```bash
 # Run the application
-./gradlew :projects:application-runner:bootRun
+./gradlew :projects:core:application-runner:bootRun
 
 # Run with arguments
-./gradlew :projects:application-runner:bootRun --args="Foo -d --debug --other=Bar"
+./gradlew :projects:core:application-runner:bootRun --args="Foo -d --debug --other=Bar"
 ```

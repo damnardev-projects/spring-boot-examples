@@ -6,8 +6,8 @@ A simple Spring Boot application which starts the context and executes a `Comman
 
 ```bash
 # Run the application
-./gradlew :projects:command-line-runner:bootRun
+./gradlew :projects:core:command-line-runner:bootRun
 
 # Run with arguments
-./gradlew :projects:command-line-runner:bootRun --args="Foo Bar"
+./gradlew :projects:core:command-line-runner:bootRun --args="Foo Bar"
 ```
