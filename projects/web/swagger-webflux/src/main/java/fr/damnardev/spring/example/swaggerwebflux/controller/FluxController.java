@@ -2,9 +2,12 @@ package fr.damnardev.spring.example.swaggerwebflux.controller;
 
 import java.time.Duration;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.util.function.Function;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import org.jspecify.annotations.NonNull;
 import reactor.core.publisher.Flux;
 
 import org.springframework.http.MediaType;
@@ -22,12 +25,17 @@ public class FluxController {
 	@Operation(summary = "Emit the current time", description = "Emits an SSE event immediately and then every second for 10 seconds.")
 	public Flux<ServerSentEvent<String>> currentTime() {
 		return Flux.interval(Duration.ZERO, Duration.ofSeconds(1))
-				   .map(ignored -> ServerSentEvent.<String>builder()
-						   .event("time")
-						   .data(LocalDateTime.now()
-										.toString())
-						   .build())
+				   .map(this::getTime)
 				   .take(Duration.ofSeconds(10));
+	}
+
+	private @NonNull ServerSentEvent<String> getTime(Long ignored) {
+		String currentTime = LocalDateTime.now(ZoneId.systemDefault())
+									 .toString();
+		return ServerSentEvent.<String>builder()
+							  .event("time")
+							  .data(currentTime)
+							  .build();
 	}
 
 }
