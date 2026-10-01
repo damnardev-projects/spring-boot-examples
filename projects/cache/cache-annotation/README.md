@@ -5,6 +5,6 @@ A simple Spring Boot application demonstrating `@Cacheable`, `@CachePut` and `@C
 ## Running the Application
 
 ```bash
-./gradlew :projects:cache-annotation:bootRun
+./gradlew :projects:cache:cache-annotation:bootRun
 ```
 

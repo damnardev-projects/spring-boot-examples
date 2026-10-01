@@ -24,15 +24,15 @@ subprojects {
  */
 dependencies {
 	// Aggregate JaCoCo reports from subprojects
-	jacocoAggregation project(':projects:command-line-runner')
-	jacocoAggregation project(':projects:application-runner')
-	jacocoAggregation project(':projects:value-annotation')
-	jacocoAggregation project(':projects:scheduled-annotation')
-	jacocoAggregation project(':projects:configuration-properties')
-	jacocoAggregation project(':projects:swagger-webmvc')
-	jacocoAggregation project(':projects:scalar-webmvc')
-	jacocoAggregation project(':projects:jpa-example')
-	jacocoAggregation project(':projects:cache-annotation')
+	jacocoAggregation project(':projects:core:command-line-runner')
+	jacocoAggregation project(':projects:core:application-runner')
+	jacocoAggregation project(':projects:core:value-annotation')
+	jacocoAggregation project(':projects:core:scheduled-annotation')
+	jacocoAggregation project(':projects:core:configuration-properties')
+	jacocoAggregation project(':projects:web:swagger-webmvc')
+	jacocoAggregation project(':projects:web:scalar-webmvc')
+	jacocoAggregation project(':projects:jpa:jpa-example')
+	jacocoAggregation project(':projects:cache:cache-annotation')
 }
 
 /**

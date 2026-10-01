@@ -5,5 +5,5 @@ A simple Spring Boot application which demonstrates the use of the `@Value` anno
 ## Running the Application
 
 ```bash
-./gradlew :projects:value-annotation:bootRun
+./gradlew :projects:core:value-annotation:bootRun
 ```

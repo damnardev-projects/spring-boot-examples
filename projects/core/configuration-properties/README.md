@@ -5,5 +5,5 @@ A simple Spring Boot application which demonstrates the use of the `@Configurati
 ## Running the Application
 
 ```bash
-./gradlew :projects:configuration-properties:bootRun
+./gradlew :projects:core:configuration-properties:bootRun
 ```

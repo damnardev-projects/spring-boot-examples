@@ -14,7 +14,10 @@ This project contains a collection of Spring Boot examples.
     - `library-conventions` — extends `common-conventions` for library modules.
     - `application-conventions` — extends `common-conventions`, applies the `application` plugin and
       `org.springframework.boot` plugin for runnable Spring Boot applications.
-- **projects/** — all spring boot examples
+- **projects/core/** — core Spring Boot examples
+- **projects/jpa/** — JPA examples
+- **projects/web/** — web and API documentation examples
+- **projects/cache/** — caching examples
 - **build/** — compiled outputs and generated reports.
 
 ## Useful Commands
