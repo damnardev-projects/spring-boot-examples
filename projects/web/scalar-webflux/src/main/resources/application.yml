@@ -1,0 +1,17 @@
+spring:
+  main:
+    banner-mode: off
+  application:
+    name: scalar-webflux
+  r2dbc:
+    url: r2dbc:h2:mem:///demo
+    username: sa
+    password:
+  sql:
+    init:
+      mode: always
+
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs

@@ -21,6 +21,7 @@ public class DependenciesConvention {
 		Provider<MinimalExternalModuleDependency> swaggerWebMVC = get(libs, "swagger-webmvc");
 		Provider<MinimalExternalModuleDependency> swaggerWebFlux = get(libs, "swagger-webflux");
 		Provider<MinimalExternalModuleDependency> scalarWebMVC = get(libs, "scalar-webmvc");
+		Provider<MinimalExternalModuleDependency> scalarWebFlux = get(libs, "scalar-webflux");
 
 		DependencyHandler dependencies = project.getDependencies();
 		dependencies.add(IMPLEMENTATION_CONFIGURATION_NAME, dependencies.platform(springBootBom));
@@ -34,6 +35,7 @@ public class DependenciesConvention {
 		dependencies.constraints(c -> c.add(IMPLEMENTATION_CONFIGURATION_NAME, swaggerWebMVC));
 		dependencies.constraints(c -> c.add(IMPLEMENTATION_CONFIGURATION_NAME, swaggerWebFlux));
 		dependencies.constraints(c -> c.add(IMPLEMENTATION_CONFIGURATION_NAME, scalarWebMVC));
+		dependencies.constraints(c -> c.add(IMPLEMENTATION_CONFIGURATION_NAME, scalarWebFlux));
 	}
 
 }

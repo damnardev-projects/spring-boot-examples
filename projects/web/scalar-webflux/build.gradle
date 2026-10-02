@@ -1,0 +1,15 @@
+plugins {
+	id 'application-conventions'
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-webflux'
+	implementation 'org.springframework.boot:spring-boot-starter-data-r2dbc'
+	implementation 'org.springdoc:springdoc-openapi-starter-webflux-scalar'
+	runtimeOnly 'io.r2dbc:r2dbc-h2'
+	runtimeOnly 'org.springframework.boot:spring-boot-starter-logging'
+}
+
+application {
+	mainClass = 'fr.damnardev.spring.example.scalarwebflux.Startup'
+}
