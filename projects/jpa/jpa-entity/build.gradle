@@ -10,5 +10,5 @@ dependencies {
 }
 
 application {
-	mainClass = 'fr.damnardev.spring.example.jpaexample.Startup'
+	mainClass = 'fr.damnardev.spring.example.jpaentity.Startup'
 }

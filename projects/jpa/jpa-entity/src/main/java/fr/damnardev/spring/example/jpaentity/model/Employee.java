@@ -1,4 +1,4 @@
-package fr.damnardev.spring.example.jpaexample.model;
+package fr.damnardev.spring.example.jpaentity.model;
 
 import java.time.LocalDate;
 import java.util.Objects;
