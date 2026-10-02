@@ -11,6 +11,7 @@ spring-boot-gradle-plugin = { group = "org.springframework.boot", name = "spring
 swagger-webmvc = { group = "org.springdoc", name = "springdoc-openapi-starter-webmvc-ui", version.ref = "springdoc" }
 swagger-webflux = { group = "org.springdoc", name = "springdoc-openapi-starter-webflux-ui", version.ref = "springdoc" }
 scalar-webmvc = { group = "org.springdoc", name = "springdoc-openapi-starter-webmvc-scalar", version.ref = "springdoc" }
+scalar-webflux = { group = "org.springdoc", name = "springdoc-openapi-starter-webflux-scalar", version.ref = "springdoc" }
 
 [plugins]
 sonarqube = { id = "org.sonarqube", version.ref = "sonarqube" }
