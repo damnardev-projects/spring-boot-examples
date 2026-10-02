@@ -1,11 +1,11 @@
-package fr.damnardev.spring.example.jpaexample;
+package fr.damnardev.spring.example.jpaentity;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.FullyQualifiedConfigurationBeanNameGenerator;
 
 @SpringBootApplication(
-		scanBasePackages = "fr.damnardev.spring.example.jpaexample",
+		scanBasePackages = "fr.damnardev.spring.example.jpaentity",
 		nameGenerator = FullyQualifiedConfigurationBeanNameGenerator.class
 )
 public class Startup {

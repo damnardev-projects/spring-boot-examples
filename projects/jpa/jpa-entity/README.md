@@ -5,5 +5,5 @@ A Spring Boot application which starts a JPA context with an in-memory H2 databa
 ## Running the Application
 
 ```bash
-./gradlew :projects:jpa:jpa-example:bootRun
+./gradlew :projects:jpa:jpa-entity:bootRun
 ```

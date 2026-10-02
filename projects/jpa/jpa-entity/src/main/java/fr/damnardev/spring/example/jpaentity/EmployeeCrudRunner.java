@@ -1,4 +1,4 @@
-package fr.damnardev.spring.example.jpaexample;
+package fr.damnardev.spring.example.jpaentity;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -11,8 +11,8 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Component;
 
-import fr.damnardev.spring.example.jpaexample.model.Employee;
-import fr.damnardev.spring.example.jpaexample.repository.EmployeeRepository;
+import fr.damnardev.spring.example.jpaentity.model.Employee;
+import fr.damnardev.spring.example.jpaentity.repository.EmployeeRepository;
 
 @Component
 public class EmployeeCrudRunner implements ApplicationRunner {
