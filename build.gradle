@@ -35,6 +35,7 @@ dependencies {
 	jacocoAggregation project(':projects:web:scalar-webflux')
 	jacocoAggregation project(':projects:jpa:jpa-entity')
 	jacocoAggregation project(':projects:jpa:jpa-collection')
+	jacocoAggregation project(':projects:jpa:jpa-map')
 	jacocoAggregation project(':projects:cache:cache-annotation')
 }
 
