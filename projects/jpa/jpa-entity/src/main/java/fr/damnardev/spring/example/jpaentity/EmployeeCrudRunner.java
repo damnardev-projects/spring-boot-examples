@@ -8,21 +8,20 @@ import org.slf4j.LoggerFactory;
 
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Component;
 
 import fr.damnardev.spring.example.jpaentity.model.Employee;
-import fr.damnardev.spring.example.jpaentity.repository.EmployeeRepository;
+import fr.damnardev.spring.example.jpaentity.service.EmployeeService;
 
 @Component
 public class EmployeeCrudRunner implements ApplicationRunner {
 
 	private static final Logger logger = LoggerFactory.getLogger(EmployeeCrudRunner.class);
 
-	private final EmployeeRepository employeeRepository;
+	private final EmployeeService employeeService;
 
-	public EmployeeCrudRunner(EmployeeRepository employeeRepository) {
-		this.employeeRepository = employeeRepository;
+	public EmployeeCrudRunner(EmployeeService employeeService) {
+		this.employeeService = employeeService;
 	}
 
 	@Override
@@ -37,54 +36,40 @@ public class EmployeeCrudRunner implements ApplicationRunner {
 	}
 
 	private void initData() {
-		List<Employee> employees = this.employeeRepository.saveAll(List.of(
-				new Employee("Ada", "Lovelace", LocalDate.of(1815, 12, 10)),
-				new Employee("Alan", "Turing", LocalDate.of(1912, 6, 23)),
-				new Employee("Grace", "Hopper", LocalDate.of(1906, 12, 9)),
-				new Employee("Katherine", "Johnson", LocalDate.of(1918, 8, 26)),
-				new Employee("Dennis", "Ritchie", LocalDate.of(1941, 9, 9)),
-				new Employee("Margaret", "Hamilton", LocalDate.of(1936, 8, 17)),
-				new Employee("Edsger", "Dijkstra", LocalDate.of(1930, 5, 11)),
-				new Employee("Barbara", "Liskov", LocalDate.of(1939, 11, 7)),
-				new Employee("James", "Gosling", LocalDate.of(1955, 5, 19)),
-				new Employee("Guido", "van Rossum", LocalDate.of(1956, 1, 31))
-		));
+		List<Employee> employees = this.employeeService.createInitialEmployees();
 		logger.info("Created {} employees", employees.size());
 	}
 
 	private void getAll() {
-		List<Employee> listedEmployees = this.employeeRepository.findAll(Sort.by(Sort.Direction.ASC, "id"));
+		List<Employee> listedEmployees = this.employeeService.findAll();
 		logger.info("Listing the {} employees", listedEmployees.size());
 		listedEmployees.forEach(employee -> logger.info("{}", employee));
 	}
 
 	private Employee save() {
-		Employee insertedEmployee = this.employeeRepository.save(
+		Employee insertedEmployee = this.employeeService.createEmployee(
 				new Employee("Donald", "Knuth", LocalDate.of(1938, 1, 10)));
 		logger.info("Inserted employee: {}", insertedEmployee);
 		return insertedEmployee;
 	}
 
 	private Employee getById(Long id) {
-		Employee fetchedEmployee = this.employeeRepository.findById(id)
-														  .orElseThrow(() -> new IllegalStateException("Inserted employee was not found"));
+		Employee fetchedEmployee = this.employeeService.getById(id);
 		logger.info("Fetched employee: {}", fetchedEmployee);
 		return fetchedEmployee;
 	}
 
 	private Employee update(Employee fetchedEmployee) {
-		fetchedEmployee.setFirstName("Donald E.");
-		fetchedEmployee.setLastName("Knuth");
-		fetchedEmployee.setBirthday(LocalDate.of(1938, 1, 11));
-		Employee updatedEmployee = this.employeeRepository.save(fetchedEmployee);
+		Employee updatedEmployee = this.employeeService.updateEmployee(fetchedEmployee.getId(),
+				"Donald E.", "Knuth", LocalDate.of(1938, 1, 11));
 		logger.info("Updated employee: {}", updatedEmployee);
 		return updatedEmployee;
 	}
 
 	private void delete(Employee employee) {
-		this.employeeRepository.deleteById(employee.getId());
+		this.employeeService.deleteEmployee(employee.getId());
 		logger.info("Deleted employee with id {}: {}", employee.getId(),
-				!this.employeeRepository.existsById(employee.getId()));
+				!this.employeeService.existsById(employee.getId()));
 	}
 
 }

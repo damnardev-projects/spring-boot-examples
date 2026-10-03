@@ -1,0 +1,14 @@
+spring:
+  main:
+    banner-mode: off
+  application:
+    name: jpa-collection-example
+  datasource:
+    url: jdbc:h2:mem:user-collection-db
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    open-in-view: false
