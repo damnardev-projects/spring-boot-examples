@@ -13,7 +13,7 @@ public class DependenciesConvention {
 
 	private static @NonNull Provider<MinimalExternalModuleDependency> get(VersionCatalog libs, String alias) {
 		return libs.findLibrary(alias)
-		           .orElseThrow();
+				   .orElseThrow();
 	}
 
 	public void apply(Project project, VersionCatalog libs) {

@@ -9,14 +9,14 @@ public class JavaConvention {
 
 	public void apply(Project project, VersionCatalog libs) {
 		String javaVersion = libs.findVersion("java")
-		                         .orElseThrow()
-		                         .getRequiredVersion();
+								 .orElseThrow()
+								 .getRequiredVersion();
 
 		project.getExtensions()
-		       .getByType(JavaPluginExtension.class)
-		       .getToolchain()
-		       .getLanguageVersion()
-		       .set(JavaLanguageVersion.of(javaVersion));
+			   .getByType(JavaPluginExtension.class)
+			   .getToolchain()
+			   .getLanguageVersion()
+			   .set(JavaLanguageVersion.of(javaVersion));
 	}
 
 }
