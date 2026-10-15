@@ -2,3 +2,4 @@ rootProject.name = 'spring-boot-examples'
 
 include 'projects:core:command-line-runner'
 include 'projects:core:application-runner'
+include 'projects:core:scheduling'
