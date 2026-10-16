@@ -1,0 +1,13 @@
+plugins {
+	id 'application-conventions'
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter'
+	runtimeOnly 'org.springframework.boot:spring-boot-starter-logging'
+	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+}
+
+application {
+	mainClass = 'fr.damnardev.spring.example.configuration_properties.Startup'
+}
