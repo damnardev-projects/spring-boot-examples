@@ -27,6 +27,7 @@ dependencies {
 	jacocoAggregation project(':projects:core:command-line-runner')
 	jacocoAggregation project(':projects:core:application-runner')
 	jacocoAggregation project(':projects:core:scheduling')
+	jacocoAggregation project(':projects:core:value-injection')
 }
 
 /**
