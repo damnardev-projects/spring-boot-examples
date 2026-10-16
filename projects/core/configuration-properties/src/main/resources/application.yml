@@ -1,0 +1,14 @@
+spring:
+  main:
+    banner-mode: off
+
+app:
+  name: Spring Configuration Properties
+  timeout: 60s
+  retry:
+    max-retries: 3
+  tags:
+    - tag1
+    - tag2
+    - tag3
+  debug: true
