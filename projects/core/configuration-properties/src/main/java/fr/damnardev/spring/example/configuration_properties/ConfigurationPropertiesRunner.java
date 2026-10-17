@@ -23,8 +23,10 @@ public class ConfigurationPropertiesRunner implements CommandLineRunner {
 		logger.info("Application Version: {}", this.properties.version());
 		logger.info("Application Stage: {}", this.properties.stage());
 		logger.info("Application Timeout: {}", this.properties.timeout());
-		logger.info("Application Retry Max Retries: {}", this.properties.retry().maxRetries());
-		logger.info("Application Retry Delay: {}", this.properties.retry().delay());
+		logger.info("Application Retry Max Retries: {}", this.properties.retry()
+		                                                                .maxRetries());
+		logger.info("Application Retry Delay: {}", this.properties.retry()
+		                                                          .delay());
 		logger.info("Application Debug: {}", this.properties.debug());
 		logger.info("Application Tags: {}", this.properties.tags());
 		logger.info("Application Display Name (derived): {}", this.properties.displayName());
