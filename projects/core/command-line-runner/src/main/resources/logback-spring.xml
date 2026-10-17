@@ -3,7 +3,7 @@
 
 	<appender class="ch.qos.logback.core.ConsoleAppender" name="CONSOLE">
 		<encoder>
-			<pattern>%d{ISO8601} | %msg%n%throwable</pattern>
+			<pattern>%d{ISO8601} | %-5level | %-15.15thread | %-40.40logger{40} | %msg%n%throwable</pattern>
 		</encoder>
 	</appender>
 
