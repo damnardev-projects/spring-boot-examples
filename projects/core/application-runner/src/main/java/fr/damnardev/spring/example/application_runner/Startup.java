@@ -2,7 +2,6 @@ package fr.damnardev.spring.example.application_runner;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.FullyQualifiedConfigurationBeanNameGenerator;
 
 @SpringBootApplication
 public class Startup {
